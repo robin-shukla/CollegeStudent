@@ -1,0 +1,37 @@
+<div class="container">
+    <div class = "card">
+        <h3 class="text-center"> Students List</h3>
+        <nav class = "navbar">
+            <input class="form-control" type="text" name="studentname" [(ngModel)]="studentname" (ngModelChange)="Search()"
+                placeholder="Enter Name to search">
+
+        </nav>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>CollegeName</th>
+                    <th>RollNo</th>
+                    <th>phoneno</th>
+                    <th>EmailId</th>
+                    <th>Address</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let student of students">
+                        <td>{{ student.studentid}}</td>
+                        <td>{{ student.studentname}}</td>
+                        <td>{{ student.studentcollegename}}</td>
+                        <td>{{ student.studentroolno}}</td>
+                        <td>{{ student.studentphoneno}}</td>
+                        <td>{{ student.studentemailid}}</td>
+                        <td>{{ student.studentaddress}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
